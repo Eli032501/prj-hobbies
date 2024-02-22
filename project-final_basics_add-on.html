@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Oswald:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <title>Addicted to Music ♡♪</title>
+    <style>
+      body {
+        font-family: "Lora", serif;
+        background: linear-gradient(
+          to top,
+          #a7a6cb 0%,
+          #8989ba 52%,
+          #8989ba 100%
+        );
+      }
+      h1,
+      h2,
+      h3,
+      h4 {
+        font-family: "Oswald", sans-serif;
+        font-weight: 500;
+        margin: 0;
+      }
+      h1 {
+        text-align: center;
+        font-size: 40px;
+        text-transform: uppercase;
+        margin-bottom: 18px;
+        color: #272746;
+      }
+      h2 {
+        font-size: 26px;
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        color: #272746;
+      }
+      p {
+        margin: 0;
+        line-height: 24px;
+      }
+      h3 {
+        font-size: 22px;
+        margin: 20px 0px 8px;
+        color: #47476f;
+      }
+      h4 {
+        font-size: 18px;
+        margin-bottom: 10px;
+        color: #47476f;
+      }
+
+      .button-style {
+        text-align: center;
+        text-decoration: none;
+        display: block;
+        margin: 0px auto 20px;
+        font-size: 16px;
+        max-width: 130px;
+        padding: 6px 10px;
+        border-radius: 4px;
+        color: #fff;
+        border: solid 1px #ffffff53;
+        background-color: #4f4f79;
+        box-shadow: 3px 3px 8px #272746a9;
+        font-family: "Oswald", sans-serif;
+        text-transform: capitalize;
+        transition: all 150ms ease-in-out;
+      }
+      .button-style:hover {
+        color: #272746;
+        background-color: #ffffffb9;
+        cursor: pointer;
+      }
+      img {
+        width: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+      ul {
+        list-style-type: "♪  ";
+      }
+      li {
+        line-height: 24px;
+        margin-bottom: 12px;
+      }
+      footer {
+        margin: 40px 0 20px;
+        text-align: center;
+        color: #272746;
+        font-family: "Oswald", sans-serif;
+      }
+      .container {
+        width: 700px;
+        margin: 20px auto;
+      }
+      .frame {
+        background-color: white;
+        padding: 40px 60px;
+        border-radius: 10px;
+      }
+      .div-title {
+        font-weight: 400;
+        font-size: 30px;
+        text-transform: lowercase;
+        line-height: 32px;
+      }
+
+      .first-image {
+        margin: 18px 0 12px;
+        height: 260px;
+      }
+
+      .definition {
+        font-size: 12px;
+        margin: 6px 0px 18px;
+        color: #47476f;
+      }
+      .div-fact {
+        background-color: #2727463c;
+        padding: 20px 30px;
+        border-radius: 8px;
+        margin: 30px 0px;
+      }
+
+      .div-fact p {
+        font-size: 14px;
+        line-height: 22px;
+        margin-bottom: 8px;
+        font-weight: 400;
+      }
+      .more-info {
+        font-size: 14px;
+        color: #272746;
+        font-weight: 600;
+        transition: all 120ms ease;
+      }
+      .more-info:hover {
+        color: #47476f;
+      }
+      .sect2-title {
+        text-align: center;
+        font-size: 32px;
+        text-transform: uppercase;
+        margin: 40px 0 20px;
+      }
+      .playlist img {
+        height: 100%;
+        filter: grayscale(50%);
+        transition: transform 150ms ease-in, filter 300ms ease-in;
+      }
+      .playlist img:hover {
+        transform: scale(1.2);
+        filter: grayscale(0%);
+      }
+      .playlist a {
+        z-index: 0;
+      }
+      .playlist a:hover {
+        z-index: 1;
+      }
+      .first-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 15px;
+        margin: 50px 0 15px;
+      }
+
+      .second-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 15px;
+        margin-bottom: 35px;
+      }
+
+      .dark {
+        background: linear-gradient(
+          160deg,
+          rgba(0, 0, 0, 0.95) 10.5%,
+          #0b8491 40%,
+          rgba(0, 0, 0, 0.95) 97%
+        );
+        color: rgb(232, 232, 232);
+      }
+      .dark .frame {
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+      .dark .color-theme-blue {
+        color: #70c3cd;
+      }
+      .dark .color-theme-white {
+        color: rgb(255, 255, 255);
+      }
+      .dark .div-fact {
+        background-color: #0b849126;
+      }
+
+      .dark .more-info:hover {
+        color: #f5f5f5;
+      }
+
+      .dark .button-style {
+        color: #fff;
+        border: solid 1px #ffffff39;
+        background-color: #0b849126;
+        box-shadow: 2px 2px 11px #ffffff21;
+        transition: all 150ms ease-in-out;
+      }
+      .dark .button-style:hover {
+        color: #07464c;
+        border: solid 1px rgb(11, 132, 145);
+        background-color: #fffffff3;
+        box-shadow: 3px 3px 11px rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+      }
+      .dark .playlist img {
+        filter: grayscale(90%);
+      }
+      .dark .playlist img:hover {
+        filter: grayscale(10%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <button class="button-style button-theme">Change theme</button>
+      <h1 class="color-theme-white">
+        Listening to Music
+
+        <div class="div-title">My hobby or my addiction?</div>
+      </h1>
+
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/101/379/original/eric-krull-fi3_lDi3qPE-unsplash.jpg?1697815129"
+        alt=""
+        class="first-image"
+      />
+
+      <div class="frame">
+        <h2 class="color-theme-white">Is Listening to Music a Hobby?</h2>
+
+        <p class="first-p">
+          <strong
+            >Are you one of those people who can't live without music?
+          </strong>
+
+          Do you have a playlist for every mood and occasion? If yes, you might
+          wonder, is listening to music a hobby? Well, let's dive into this
+          question and find out!
+        </p>
+        <h3 class="color-theme-blue">What is a hobby?</h3>
+        <p>
+          <em>
+            a hobby is a regular activity that is a major source of pleasure and
+            enjoyment during one's leisure time.
+            <div class="definition color-theme-blue">Dictionary definition</div>
+          </em>
+        </p>
+        <p>
+          So, it could technically be considered a hobby if you spend your free
+          time listening to music.
+        </p>
+        <h3 class="color-theme-blue">Music is good for you!</h3>
+        <p>
+          Listening to music as a hobby can have numerous benefits that go
+          beyond pure enjoyment:
+        </p>
+        <ul>
+          <li>
+            Based on the
+            <em
+              >"Effects of Music Listening on Cortisol Levels and Propofol
+              Consumption during Spinal Anesthesia"
+            </em>
+            research paper, simply listening to music helps reduce the levels of
+            cortisol, a hormone that is associated with stress and anxiety in
+            our bodies.
+          </li>
+          <li>
+            Music can transport us to another place and time, stimulating our
+            imagination and letting us escape our daily worries. This is why
+            music can make you feel more joyful, optimistic, and inspired, as it
+            triggers the release of dopamine in the brain.
+          </li>
+          <li>
+            Listening to music as a hobby can not only enhance our creativity
+            but also our productivity, attention, and focus.
+          </li>
+        </ul>
+
+        <div class="div-fact">
+          <h4 class="color-theme-blue">Fun Fact</h4>
+          <p>
+            Have you heard of the ‘Mozart Effect’ before? It is the theory that
+            you can get 'smarter' by listening to classical music!
+          </p>
+          <p>
+            But how true is this claim? The original study found that students
+            did slightly increase their IQ test performance by listening to
+            Mozart's music... but only for 15 minutes!
+          </p>
+          <p>
+            Another experiment also found that students who listened to pop
+            music performed even better on a test than those who listened to
+            Mozart. This is because music, of any genre, can help to 'wake up'
+            the brain, and even increase our energy, so we can get be more
+            alert, productive and get better grades.
+          </p>
+        </div>
+        <a
+          href="https://schoolholidays.com.au/blog/is-listening-to-music-a-hobby"
+          target="_blank"
+          class="more-info color-theme-blue"
+          >More info
+        </a>
+      </div>
+      <h2 class="sect2-title color-theme-white">
+        Turn up the volume
+
+        <div class="div-title">Listen to some of my favs</div>
+      </h2>
+
+      <div class="playlist first-grid">
+        <a href="https://www.deezer.com/pt/track/2111636427" target="_blank">
+          <img
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/101/199/original/timezone.jpg?1697645743"
+            alt="Timezone - Måneskin"
+          />
+        </a>
+        <a href="https://www.deezer.com/pt/track/116348632" target="_blank">
+          <img
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/101/197/original/jude.jpg?1697645691"
+            alt="Hey Jude - The Beatles"
+          />
+        </a>
+      </div>
+      <div class="playlist second-grid">
+        <a href="https://www.deezer.com/pt/track/2112022247" target="_blank">
+          <img
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/101/198/original/stickseason.jpg?1697645716"
+            alt="Stick Season - Noah Kahan"
+          />
+        </a>
+        <a href="https://www.deezer.com/pt/track/1675119297" target="_blank">
+          <img
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/101/384/original/stuck.jpg?1697815962"
+            alt="Stuck On Us - Claire Rosinkranz, Aidan Bissett "
+          />
+        </a>
+        <a href="https://www.deezer.com/pt/track/1884963207" target="_blank">
+          <img
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/101/196/original/gold.jpg?1697645670"
+            alt="gold plated - Arden Jones"
+          />
+        </a>
+      </div>
+    </div>
+    <a
+      href="https://open.spotify.com/playlist/6IKwS7QKJvXVlE6p7HyGS0?si=6332f55a940148cb"
+      target="_blank"
+      class="button-style"
+      >listen to full playlist</a
+    >
+    <footer class="color-theme-white">
+      Coded by Eliana Pereira ♫ Hardcore Music Lover
+    </footer>
+    <script>
+      function changeTheme() {
+        let body = document.querySelector("body");
+        body.classList.toggle("dark");
+      }
+      let buttonTheme = document.querySelector(".button-theme");
+      buttonTheme.addEventListener("click", changeTheme);
+    </script>
+  </body>
+</html>
